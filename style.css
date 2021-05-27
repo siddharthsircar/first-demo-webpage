@@ -19,7 +19,7 @@ html {
   display: flex;
   align-items: center;
   overflow: hidden;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: #292626;
@@ -55,7 +55,6 @@ html {
 /***************************************************
 * COVER *
 ***************************************************/
-
 .cover-container {
   display: flex;
   justify-content: center;
@@ -117,16 +116,17 @@ hr {
 * FOOTER *
 ***************************************************/
 footer {
+  bottom: 0;
+  width: 100%;
   background-color: #292626;
-  padding: 20px;
+  padding: 10px;
   color: rgb(253, 252, 252);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 /***************************************************
 * RESPONSIVE *
 ***************************************************/
-
 @media only screen and (max-width: 705px) and (min-width: 460px) {
   .company-logo {
     font-size: 2rem;
