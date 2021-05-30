@@ -21,7 +21,7 @@ html {
   overflow: hidden;
   position: sticky;
   top: 0;
-  width: 100%;
+  /* width: 100%; */
   background-color: #292626;
 }
 
@@ -33,21 +33,29 @@ html {
   margin: 0px;
 }
 
-.main-nav {
+.nav-container {
   display: flex;
   list-style: none;
-  margin-left: auto;
-  padding: 0px 10px 0px 20px;
+  align-items: center;
+  width: 75vw;
+  height: 65px;
+  margin: 0;
+  padding: 0;
 }
 
-.main-nav a {
-  text-align: center;
-  text-decoration: 0;
-  color: white;
+.push-right {
+  margin-left: auto;
+  height: auto;
   padding: 20px;
 }
 
-.main-nav a:hover {
+.push-right > a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+
+a:hover {
   background: #ddd;
   color: black;
 }
@@ -61,7 +69,7 @@ html {
   align-items: left;
   flex-direction: column;
   background-color: rgba(71, 73, 73, 0.692);
-  margin-top: 0px;
+  top: 0;
   height: 100vh;
 }
 
@@ -96,20 +104,18 @@ hr {
 * IMG GRID *
 ***************************************************/
 .grid-wrapper {
-  display: grid;
-  gap: 0px;
-  grid-template-columns: repeat(auto-fill, minmax(20%, 50%));
-  width: 100%;
+  display: inline-grid;
+  padding: 20px;
+  margin: 0;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat (fit-content(500px)); */
   background-color: blanchedalmond;
 }
 
-.img-zone > img {
+.grid-wrapper > img {
   width: 100%;
-}
-
-.img-zone {
-  padding: 10px;
-  margin: 10px;
+  height: auto;
 }
 
 /***************************************************
@@ -119,14 +125,26 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #292626;
-  padding: 10px;
+  /* padding: 10px; */
   color: rgb(253, 252, 252);
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+footer > p {
+  text-align: end;
+  padding: 10px;
+  margin: 0;
 }
 
 /***************************************************
 * RESPONSIVE *
 ***************************************************/
+@media only screen and (max-width: 600px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @media only screen and (max-width: 705px) and (min-width: 460px) {
   .company-logo {
     font-size: 2rem;
